@@ -11,25 +11,88 @@ import {
   FAQStructuredData,
   ServiceStructuredData,
 } from "@/components/StructuredData";
+import {
+  MobileNavMenu,
+  MobileNavToggle,
+  MobileNavHeader,
+  MobileNav,
+  Navbar,
+  NavbarButton,
+  NavbarLogo,
+  NavBody,
+  NavItems,
+} from "@/components/ui/resizable-navbar";
+import { useState } from "react";
 
 export default function Home() {
+  const navItems = [
+    { name: "Como Funciona", link: "#como-funciona" },
+    { name: "Exemplos Práticos", link: "#exemplos" },
+    { name: "Planos e Preços", link: "#planos" },
+    { name: "Perguntas Frequentes", link: "#faq" },
+    { name: "Contato", link: "#contato" },
+  ];
+
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-background to-[#23262F] p-4 flex flex-col">
-      {/* Header */}
-      <header className="flex items-center justify-between w-full mb-16">
-        <div className="flex items-center gap-2">
-          <span className="text-white text-xl font-semibold tracking-wide">
-            Synapsis
-          </span>
-        </div>
+      <div className="fixed top-0 left-0 w-full z-50">
+        {/* Header */}
+        <Navbar>
+          {/* Desktop Navigation */}
+          <NavBody>
+            <NavbarLogo />
+            <NavItems items={navItems} />
+            <div className="flex items-center gap-4">
+              <NavbarButton variant="primary">Quero automatizar</NavbarButton>
+            </div>
+          </NavBody>
 
-        <button
-          className="bg-neutral-800 text-neutral-200 px-6 py-2 rounded-full shadow-inner hover:bg-neutral-700 transition-colors cursor-pointer"
-          style={{ boxShadow: "inset 0 2px 8px 0 rgba(255,255,255,0.10)" }}
-        >
-          Contato
-        </button>
-      </header>
+          {/* Mobile Navigation */}
+          <MobileNav>
+            <MobileNavHeader>
+              <NavbarLogo />
+              <MobileNavToggle
+                isOpen={isMobileMenuOpen}
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              />
+            </MobileNavHeader>
+
+            <MobileNavMenu
+              isOpen={isMobileMenuOpen}
+              onClose={() => setIsMobileMenuOpen(false)}
+            >
+              {navItems.map((item, idx) => (
+                <a
+                  key={`mobile-link-${idx}`}
+                  href={item.link}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="relative text-neutral-600 dark:text-neutral-300"
+                >
+                  <span className="block">{item.name}</span>
+                </a>
+              ))}
+              <div className="flex w-full flex-col gap-4">
+                <NavbarButton
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  variant="primary"
+                  className="w-full"
+                >
+                  Login
+                </NavbarButton>
+                <NavbarButton
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  variant="primary"
+                  className="w-full"
+                >
+                  Book a call
+                </NavbarButton>
+              </div>
+            </MobileNavMenu>
+          </MobileNav>
+        </Navbar>
+      </div>
 
       {/* Main Content */}
       <main className="flex flex-col items-center justify-center text-center h-full w-full">

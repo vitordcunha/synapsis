@@ -1,55 +1,52 @@
-import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { useState } from "react";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
+import { motion, AnimatePresence } from "motion/react";
 
 export function FAQSection() {
-  const [openFAQ, setOpenFAQ] = useState<number | null>(0);
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
   const faqs = [
     {
-      question: "Quanto tempo leva para implementar uma automação?",
+      question: "Como funciona a implementação da automação?",
       answer:
-        "O tempo varia conforme a complexidade, mas a maioria das automações básicas fica pronta entre 2-4 semanas. Automações mais complexas podem levar de 1-3 meses. Durante o diagnóstico, fornecemos um cronograma detalhado.",
+        "Nosso processo inicia com uma análise detalhada dos seus processos atuais. Em seguida, desenvolvemos uma estratégia personalizada e implementamos as soluções de IA de forma gradual, garantindo que sua equipe esteja preparada para as mudanças. Todo o processo é acompanhado por nossos especialistas.",
     },
     {
-      question: "Preciso de conhecimento técnico para usar as automações?",
+      question: "Quanto tempo leva para ver resultados?",
       answer:
-        "Não! Nossas automações são projetadas para serem intuitivas. Fornecemos treinamento completo para sua equipe e suporte contínuo. A ideia é que você foque no seu negócio, não na tecnologia.",
+        "Os primeiros resultados geralmente são visíveis em 2-4 semanas após a implementação. A automação completa e otimização dos processos pode levar de 1 a 3 meses, dependendo da complexidade e do número de processos sendo automatizados.",
     },
     {
-      question: "As automações funcionam com meus sistemas atuais?",
+      question: "É necessário ter conhecimento técnico para usar?",
       answer:
-        "Sim, nossas soluções são desenvolvidas para integrar com a maioria dos sistemas existentes (ERPs, CRMs, planilhas, emails, etc.). Durante o diagnóstico, mapeamos todas as integrações necessárias.",
+        "Não! Nossas soluções são desenvolvidas para serem intuitivas e fáceis de usar. Fornecemos treinamento completo para sua equipe e suporte contínuo. A IA trabalha em segundo plano, simplificando os processos para os usuários finais.",
     },
     {
-      question: "E se eu quiser cancelar o serviço?",
+      question: "Como vocês garantem a segurança dos dados?",
       answer:
-        "Você pode cancelar a qualquer momento com 30 dias de antecedência. As automações desenvolvidas durante o setup continuam funcionando, mas você perde o suporte e atualizações da plataforma.",
+        "Utilizamos as mais altas normas de segurança da indústria, incluindo criptografia end-to-end, conformidade com LGPD/GDPR, e infraestrutura em nuvem certificada. Todos os dados são processados em servidores seguros e nunca compartilhados com terceiros.",
     },
     {
-      question: "Vocês oferecem garantia nos resultados?",
+      question: "Posso integrar com meus sistemas existentes?",
       answer:
-        "Sim! Garantimos que você verá melhorias mensuráveis nos primeiros 60 dias ou devolvemos o investimento do setup. Nosso sucesso está diretamente ligado ao seu.",
+        "Sim! Nossas soluções são desenvolvidas para integrar perfeitamente com seus sistemas existentes, como ERPs, CRMs, sistemas de contabilidade, e outras ferramentas que sua empresa já utiliza. Trabalhamos com as principais plataformas do mercado.",
     },
     {
-      question: "Como funciona o suporte técnico?",
+      question: "Qual é o ROI esperado da automação?",
       answer:
-        "Oferecemos suporte via chat, email e telefone. Planos básicos têm suporte em horário comercial, enquanto planos profissionais incluem suporte prioritário com resposta em até 2 horas.",
-    },
-    {
-      question: "Posso começar com um processo e expandir depois?",
-      answer:
-        "Absolutamente! Recomendamos começar com o processo mais crítico e expandir gradualmente. Isso permite que sua equipe se adapte e você veja resultados rapidamente antes de investir em mais automações.",
-    },
-    {
-      question: "Os dados da minha empresa ficam seguros?",
-      answer:
-        "Segurança é nossa prioridade. Utilizamos criptografia de ponta, servidores certificados e seguimos as melhores práticas de proteção de dados. Seus dados nunca são compartilhados com terceiros.",
+        "Nossos clientes tipicamente veem uma redução de 70-90% no tempo gasto em processos manuais, resultando em um ROI de 300-500% no primeiro ano. Além da economia de tempo, há redução significativa de erros e melhoria na produtividade geral da equipe.",
     },
   ];
 
   return (
-    <section className="w-full mt-32">
-      <div className="text-center mb-16 flex items-center flex-col gap-5">
+    <section id="faq" className="w-full mt-32">
+      <motion.div
+        className="text-center mb-16 flex items-center flex-col gap-5"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
         <HoverBorderGradient
           containerClassName="rounded-full border-border"
           as="div"
@@ -61,34 +58,39 @@ export function FAQSection() {
         </HoverBorderGradient>
 
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          FAQ: Automação de Processos
+          Dúvidas Comuns sobre
           <br />
-          com Inteligência Artificial
+          Automação de Processos com IA
         </h2>
         <p className="text-lg text-neutral-400 max-w-2xl">
-          Perguntas frequentes sobre implementação de IA empresarial, custos,
-          integração de sistemas e resultados da automação de processos
+          Tire suas dúvidas sobre nossa solução de automação empresarial e
+          entenda como podemos transformar seus processos manuais em operações
+          inteligentes e eficientes.
         </p>
-      </div>
+      </motion.div>
 
       <div className="max-w-4xl mx-auto">
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div
+            <motion.div
               key={index}
               className="bg-neutral-800/50 backdrop-blur-md border border-neutral-700 rounded-2xl overflow-hidden transition-all duration-300 hover:border-neutral-600"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              viewport={{ once: true }}
             >
-              <button
+              <motion.button
                 onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
                 className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-neutral-800/70 transition-colors"
+                whileHover={{ backgroundColor: "rgba(38, 38, 38, 0.7)" }}
               >
                 <h3 className="text-lg font-semibold text-white pr-4">
                   {faq.question}
                 </h3>
-                <div
-                  className={`transform transition-transform duration-300 ${
-                    openFAQ === index ? "rotate-180" : ""
-                  }`}
+                <motion.div
+                  animate={{ rotate: openFAQ === index ? 180 : 0 }}
+                  transition={{ duration: 0.2 }}
                 >
                   <svg
                     className="w-6 h-6 text-neutral-400"
@@ -103,43 +105,64 @@ export function FAQSection() {
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                </div>
-              </button>
+                </motion.div>
+              </motion.button>
 
-              <div
-                className={`overflow-hidden transition-all duration-300 ${
-                  openFAQ === index
-                    ? "max-h-96 opacity-100"
-                    : "max-h-0 opacity-0"
-                }`}
-              >
-                <div className="px-8 pb-6">
-                  <div className="w-full h-px bg-gradient-to-r from-transparent via-neutral-600 to-transparent mb-6"></div>
-                  <p className="text-neutral-300 leading-relaxed">
-                    {faq.answer}
-                  </p>
-                </div>
-              </div>
-            </div>
+              <AnimatePresence initial={false}>
+                {openFAQ === index && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                  >
+                    <div className="px-8 pb-6">
+                      <motion.div
+                        className="w-full h-px bg-gradient-to-r from-transparent via-neutral-600 to-transparent mb-6"
+                        initial={{ scaleX: 0 }}
+                        animate={{ scaleX: 1 }}
+                        transition={{ duration: 0.3, delay: 0.1 }}
+                      />
+                      <motion.p
+                        className="text-neutral-300 leading-relaxed"
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.3, delay: 0.2 }}
+                      >
+                        {faq.answer}
+                      </motion.p>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
           ))}
         </div>
-
-        {/* CTA no final do FAQ */}
-        <div className="mt-12 text-center">
-          <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-8">
-            <h3 className="text-xl font-semibold text-white mb-4">
-              Ainda tem dúvidas?
-            </h3>
-            <p className="text-neutral-400 mb-6">
-              Nossa equipe está pronta para esclarecer qualquer questão
-              específica do seu negócio
-            </p>
-            <button className="bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-500 transition-colors">
-              Falar com Especialista
-            </button>
-          </div>
-        </div>
       </div>
+
+      {/* CTA Section */}
+      <motion.div
+        className="mt-16 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-8 text-center max-w-4xl mx-auto"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        viewport={{ once: true }}
+      >
+        <h3 className="text-2xl font-bold text-white mb-4">
+          Ainda tem dúvidas?
+        </h3>
+        <p className="text-neutral-300 mb-6 max-w-2xl mx-auto">
+          Nossa equipe de especialistas está pronta para esclarecer qualquer
+          questão sobre automação de processos com IA para sua empresa.
+        </p>
+        <motion.button
+          className="bg-blue-600 text-white px-8 py-3 rounded-xl hover:bg-blue-700 transition-colors font-semibold"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Falar com um Especialista
+        </motion.button>
+      </motion.div>
     </section>
   );
 }
