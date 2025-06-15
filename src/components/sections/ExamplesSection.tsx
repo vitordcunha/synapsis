@@ -172,12 +172,14 @@ export function ExamplesSection() {
         </HoverBorderGradient>
 
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          Veja como automatizamos
+          Automação de Processos por Setor:
           <br />
-          diferentes setores
+          Contabilidade, RH, Vendas e Mais
         </h2>
         <p className="text-lg text-neutral-400 max-w-2xl">
-          Exemplos reais de automações que transformam o dia a dia das empresas
+          Casos de sucesso de automação empresarial com IA. Veja como reduzimos
+          tempo de execução e aumentamos a precisão em processos de
+          contabilidade, recursos humanos, vendas, saúde e advocacia.
         </p>
       </div>
 

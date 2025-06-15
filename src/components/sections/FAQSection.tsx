@@ -61,12 +61,13 @@ export function FAQSection() {
         </HoverBorderGradient>
 
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          Dúvidas comuns sobre
+          FAQ: Automação de Processos
           <br />
-          automação com IA
+          com Inteligência Artificial
         </h2>
         <p className="text-lg text-neutral-400 max-w-2xl">
-          Respostas claras para as principais questões dos nossos clientes
+          Perguntas frequentes sobre implementação de IA empresarial, custos,
+          integração de sistemas e resultados da automação de processos
         </p>
       </div>
 

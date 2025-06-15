@@ -15,9 +15,9 @@ export function HowItWorksSection() {
         </HoverBorderGradient>
 
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          Temos 4 passos simples para
+          4 Passos para Implementar
           <br />
-          automatizar processos
+          Automação de Processos com IA
         </h2>
       </div>
 
@@ -66,11 +66,11 @@ export function HowItWorksSection() {
             </div>
 
             <h3 className="text-xl font-semibold text-white mb-4">
-              Diagnóstico
+              Diagnóstico de Processos
             </h3>
             <p className="text-neutral-400 text-center text-sm leading-relaxed">
-              Analisamos seus processos atuais e identificamos oportunidades de
-              melhoria com IA
+              Análise completa dos processos empresariais atuais e identificação
+              de oportunidades de automação com inteligência artificial
             </p>
           </div>
         </div>
@@ -122,11 +122,11 @@ export function HowItWorksSection() {
               </div>
             </div>
             <h3 className="text-xl font-semibold text-white mb-4">
-              Estratégia
+              Estratégia de Automação
             </h3>
             <p className="text-neutral-400 text-center text-sm leading-relaxed">
-              Desenvolvemos um plano estratégico personalizado para maximizar os
-              benefícios da automação
+              Desenvolvimento de plano estratégico personalizado para maximizar
+              ROI e benefícios da automação empresarial com IA
             </p>
           </div>
         </div>
@@ -190,11 +190,11 @@ export function HowItWorksSection() {
               </div>
             </div>
             <h3 className="text-xl font-semibold text-white mb-4">
-              Implementação
+              Implementação de IA
             </h3>
             <p className="text-neutral-400 text-center text-sm leading-relaxed">
-              Desenvolvemos e implementamos soluções de IA personalizadas para
-              sua empresa
+              Desenvolvimento e implementação de soluções de inteligência
+              artificial personalizadas para automação de processos empresariais
             </p>
           </div>
         </div>
