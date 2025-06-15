@@ -24,14 +24,14 @@ export function HowItWorksSection() {
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
           Nossa Metodologia de Automação
         </h2>
-        <p className="text-lg text-neutral-400 max-w-2xl">
+        <p className="text-xl text-neutral-300 max-w-3xl leading-relaxed">
           Processo estruturado de análise, desenvolvimento e implementação de
           soluções de automação personalizadas para seu negócio
         </p>
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
-        {/* Step 1 - Análise */}
+        {/* Step 1 - Mapeamento */}
         <motion.div
           className="relative group"
           initial={{ opacity: 0, y: 50 }}
@@ -45,7 +45,7 @@ export function HowItWorksSection() {
             </div>
           </div>
 
-          <div className="bg-neutral-800/50 backdrop-blur-md border border-neutral-700 rounded-2xl p-8 pt-12 h-[400px] flex flex-col items-center mt-10 transition-all duration-300 hover:bg-neutral-800/70 hover:border-blue-600/50 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2">
+          <div className="bg-neutral-800/50 backdrop-blur-md border border-neutral-700 rounded-2xl p-8 pt-12 h-[450px] flex flex-col items-center mt-10 transition-all duration-300 hover:bg-neutral-800/70 hover:border-blue-600/50 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2">
             <div className="w-32 h-32 bg-neutral-700/50 rounded-2xl border border-neutral-600 flex items-center justify-center mb-8">
               <div className="flex flex-col items-center gap-3">
                 <div className="w-16 h-16 bg-neutral-600 border border-neutral-500 rounded-xl flex items-center justify-center relative overflow-hidden">
@@ -66,16 +66,18 @@ export function HowItWorksSection() {
             </div>
 
             <h3 className="text-xl font-semibold text-white mb-4 text-center">
-              Análise Detalhada
+              Mapeamento Detalhado
             </h3>
-            <p className="text-neutral-400 text-center text-sm leading-relaxed">
-              Análise completa dos processos empresariais atuais e identificação
-              de oportunidades de automação com inteligência artificial
+            <p className="text-neutral-300 text-center text-base leading-relaxed">
+              <strong>Analisamos seus processos de ponta a ponta</strong> para
+              identificar os <strong>maiores gargalos operacionais</strong> e as
+              melhores oportunidades de automação, garantindo o{" "}
+              <strong>máximo retorno sobre o investimento.</strong>
             </p>
           </div>
         </motion.div>
 
-        {/* Step 2 - Estratégia */}
+        {/* Step 2 - Desenvolvimento */}
         <motion.div
           className="relative group"
           initial={{ opacity: 0, y: 50 }}
@@ -89,7 +91,7 @@ export function HowItWorksSection() {
             </div>
           </div>
 
-          <div className="bg-neutral-800/50 backdrop-blur-md border border-neutral-700 rounded-2xl p-8 pt-12 h-[400px] flex flex-col items-center mt-10 transition-all duration-300 hover:bg-neutral-800/70 hover:border-yellow-600/50 hover:shadow-2xl hover:shadow-yellow-500/10 hover:-translate-y-2">
+          <div className="bg-neutral-800/50 backdrop-blur-md border border-neutral-700 rounded-2xl p-8 pt-12 h-[450px] flex flex-col items-center mt-10 transition-all duration-300 hover:bg-neutral-800/70 hover:border-yellow-600/50 hover:shadow-2xl hover:shadow-yellow-500/10 hover:-translate-y-2">
             <div className="w-32 h-32 bg-neutral-700/50 rounded-2xl border border-neutral-600 flex items-center justify-center mb-8">
               <div className="flex flex-col items-center gap-3">
                 <div className="w-16 h-16 bg-neutral-600 border border-neutral-500 rounded-xl flex items-center justify-center relative overflow-hidden">
@@ -118,16 +120,18 @@ export function HowItWorksSection() {
             </div>
 
             <h3 className="text-xl font-semibold text-white mb-4 text-center">
-              Estratégia Personalizada
+              Desenvolvimento Ágil
             </h3>
-            <p className="text-neutral-400 text-center text-sm leading-relaxed">
-              Criamos uma estratégia de automação sob medida, priorizando
-              processos com maior impacto no ROI e eficiência operacional
+            <p className="text-neutral-300 text-center text-base leading-relaxed">
+              <strong>Desenvolvemos a IA personalizada</strong> para suas
+              necessidades específicas usando metodologia ágil, com{" "}
+              <strong>entregas incrementais</strong> e testes contínuos para
+              garantir <strong>qualidade e rapidez.</strong>
             </p>
           </div>
         </motion.div>
 
-        {/* Step 3 - Desenvolvimento */}
+        {/* Step 3 - Validação */}
         <motion.div
           className="relative group"
           initial={{ opacity: 0, y: 50 }}
@@ -141,7 +145,7 @@ export function HowItWorksSection() {
             </div>
           </div>
 
-          <div className="bg-neutral-800/50 backdrop-blur-md border border-neutral-700 rounded-2xl p-8 pt-12 h-[400px] flex flex-col items-center mt-10 transition-all duration-300 hover:bg-neutral-800/70 hover:border-green-600/50 hover:shadow-2xl hover:shadow-green-500/10 hover:-translate-y-2">
+          <div className="bg-neutral-800/50 backdrop-blur-md border border-neutral-700 rounded-2xl p-8 pt-12 h-[450px] flex flex-col items-center mt-10 transition-all duration-300 hover:bg-neutral-800/70 hover:border-green-600/50 hover:shadow-2xl hover:shadow-green-500/10 hover:-translate-y-2">
             <div className="w-32 h-32 bg-neutral-700/50 rounded-2xl border border-neutral-600 flex items-center justify-center mb-8 relative">
               <div className="flex flex-col items-center gap-3">
                 <div className="w-16 h-10 bg-neutral-600 border border-neutral-500 rounded-lg flex items-center justify-center relative overflow-hidden">
@@ -172,17 +176,18 @@ export function HowItWorksSection() {
             </div>
 
             <h3 className="text-xl font-semibold text-white mb-4 text-center">
-              Desenvolvimento Ágil
+              Validação Rigorosa
             </h3>
-            <p className="text-neutral-400 text-center text-sm leading-relaxed">
-              Desenvolvemos e testamos as soluções de automação com metodologia
-              ágil, garantindo entregas rápidas e alinhadas com suas
-              necessidades
+            <p className="text-neutral-300 text-center text-base leading-relaxed">
+              <strong>Testamos intensivamente</strong> cada solução em ambiente
+              controlado, validando{" "}
+              <strong>precisão, velocidade e confiabilidade</strong> antes da
+              implementação final em produção.
             </p>
           </div>
         </motion.div>
 
-        {/* Step 4 - Resultados */}
+        {/* Step 4 - Implementação */}
         <motion.div
           className="relative group"
           initial={{ opacity: 0, y: 50 }}
@@ -196,7 +201,7 @@ export function HowItWorksSection() {
             </div>
           </div>
 
-          <div className="bg-neutral-800/50 backdrop-blur-md border border-neutral-700 rounded-2xl p-8 pt-12 h-[400px] flex flex-col items-center mt-10 transition-all duration-300 hover:bg-neutral-800/70 hover:border-purple-600/50 hover:shadow-2xl hover:shadow-purple-500/10 hover:-translate-y-2">
+          <div className="bg-neutral-800/50 backdrop-blur-md border border-neutral-700 rounded-2xl p-8 pt-12 h-[450px] flex flex-col items-center mt-10 transition-all duration-300 hover:bg-neutral-800/70 hover:border-purple-600/50 hover:shadow-2xl hover:shadow-purple-500/10 hover:-translate-y-2">
             <div className="w-32 h-32 bg-neutral-700/50 rounded-2xl border border-neutral-600 flex items-center justify-center mb-8">
               <div className="flex flex-col items-center gap-3">
                 <div className="w-16 h-12 bg-neutral-600 border border-neutral-500 rounded-lg flex items-center justify-center relative overflow-hidden">
@@ -227,11 +232,13 @@ export function HowItWorksSection() {
             </div>
 
             <h3 className="text-xl font-semibold text-white mb-4 text-center">
-              Resultados Mensuráveis
+              Implementação Completa
             </h3>
-            <p className="text-neutral-400 text-center text-sm leading-relaxed">
-              Implementação com acompanhamento contínuo e métricas de
-              performance, garantindo ROI positivo e melhoria contínua
+            <p className="text-neutral-300 text-center text-base leading-relaxed">
+              <strong>Implementamos com acompanhamento 24/7</strong> e
+              monitoramento contínuo de performance, garantindo{" "}
+              <strong>ROI positivo desde o primeiro mês</strong> e melhoria
+              contínua dos resultados.
             </p>
           </div>
         </motion.div>
