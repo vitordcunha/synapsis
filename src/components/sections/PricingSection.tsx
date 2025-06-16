@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 export function PricingSection() {
   return (
-    <section id="precos" className="w-full mt-32">
+    <section id="planos" className="w-full mt-32">
       <motion.div
         className="text-center mb-16 flex items-center flex-col gap-5"
         initial={{ opacity: 0, y: 30 }}
@@ -24,10 +24,15 @@ export function PricingSection() {
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
           Planos Flexíveis para Automação Empresarial com IA
         </h2>
-        <p className="text-lg text-neutral-400 max-w-2xl">
-          Escolha o plano ideal para transformar seus processos manuais em
-          automação inteligente. Todos os planos incluem suporte técnico
-          especializado e integração personalizada.
+        <p className="text-xl text-neutral-300 max-w-3xl leading-relaxed">
+          Escolha o plano ideal para{" "}
+          <strong>transformar seus processos manuais</strong> em automação
+          inteligente. Todos os planos incluem{" "}
+          <strong className="text-blue-400">
+            suporte técnico especializado
+          </strong>{" "}
+          e <strong className="text-green-400">integração personalizada</strong>
+          .
         </p>
       </motion.div>
 
@@ -57,7 +62,7 @@ export function PricingSection() {
               <span className="text-neutral-400">/mês</span>
             </div>
             <p className="text-neutral-500 text-sm mt-2">
-              Automação de até 3 processos
+              Automação de até 3 processos departamentais
             </p>
           </div>
 
@@ -66,30 +71,40 @@ export function PricingSection() {
               <div className="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center">
                 <span className="text-white text-xs">✓</span>
               </div>
-              <span className="text-neutral-300">
-                Automação de até 3 processos
+              <span className="text-neutral-300 text-sm">
+                <strong>Até 3 processos</strong> automatizados por departamento
               </span>
             </li>
             <li className="flex items-center gap-3">
               <div className="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center">
                 <span className="text-white text-xs">✓</span>
               </div>
-              <span className="text-neutral-300">
-                Integração com sistemas existentes
+              <span className="text-neutral-300 text-sm">
+                <strong>Integração básica</strong> com até 5 sistemas existentes
               </span>
             </li>
             <li className="flex items-center gap-3">
               <div className="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center">
                 <span className="text-white text-xs">✓</span>
               </div>
-              <span className="text-neutral-300">Suporte técnico básico</span>
+              <span className="text-neutral-300 text-sm">
+                <strong>Suporte via email</strong> (resposta em até 24h)
+              </span>
             </li>
             <li className="flex items-center gap-3">
               <div className="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center">
                 <span className="text-white text-xs">✓</span>
               </div>
-              <span className="text-neutral-300">
-                Relatórios mensais de performance
+              <span className="text-neutral-300 text-sm">
+                <strong>Dashboard básico</strong> com relatórios mensais
+              </span>
+            </li>
+            <li className="flex items-center gap-3">
+              <div className="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center">
+                <span className="text-white text-xs">✓</span>
+              </div>
+              <span className="text-neutral-300 text-sm">
+                <strong>Treinamento inicial</strong> de 4 horas para equipe
               </span>
             </li>
           </ul>
@@ -99,7 +114,7 @@ export function PricingSection() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Começar Agora
+            Escolher Starter
           </motion.button>
         </motion.div>
 
@@ -134,7 +149,7 @@ export function PricingSection() {
               <span className="text-neutral-400">/mês</span>
             </div>
             <p className="text-neutral-500 text-sm mt-2">
-              Automação de até 10 processos
+              Automação de até 10 processos interdepartamentais
             </p>
           </div>
 
@@ -143,38 +158,51 @@ export function PricingSection() {
               <div className="w-5 h-5 bg-purple-500 rounded-full flex items-center justify-center">
                 <span className="text-white text-xs">✓</span>
               </div>
-              <span className="text-neutral-300">
-                Automação de até 10 processos
+              <span className="text-neutral-300 text-sm">
+                <strong>Até 10 processos</strong> automatizados entre
+                departamentos
               </span>
             </li>
             <li className="flex items-center gap-3">
               <div className="w-5 h-5 bg-purple-500 rounded-full flex items-center justify-center">
                 <span className="text-white text-xs">✓</span>
               </div>
-              <span className="text-neutral-300">
-                IA personalizada para seu negócio
+              <span className="text-neutral-300 text-sm">
+                <strong>IA personalizada</strong> treinada com dados do seu
+                negócio
               </span>
             </li>
             <li className="flex items-center gap-3">
               <div className="w-5 h-5 bg-purple-500 rounded-full flex items-center justify-center">
                 <span className="text-white text-xs">✓</span>
               </div>
-              <span className="text-neutral-300">
-                Suporte técnico prioritário
+              <span className="text-neutral-300 text-sm">
+                <strong>Gerente de conta dedicado</strong> + suporte via
+                WhatsApp
               </span>
             </li>
             <li className="flex items-center gap-3">
               <div className="w-5 h-5 bg-purple-500 rounded-full flex items-center justify-center">
                 <span className="text-white text-xs">✓</span>
               </div>
-              <span className="text-neutral-300">Dashboard em tempo real</span>
+              <span className="text-neutral-300 text-sm">
+                <strong>Dashboard avançado</strong> com relatórios em tempo real
+              </span>
             </li>
             <li className="flex items-center gap-3">
               <div className="w-5 h-5 bg-purple-500 rounded-full flex items-center justify-center">
                 <span className="text-white text-xs">✓</span>
               </div>
-              <span className="text-neutral-300">
-                Treinamento personalizado
+              <span className="text-neutral-300 text-sm">
+                <strong>Treinamento completo</strong> de 12 horas + certificação
+              </span>
+            </li>
+            <li className="flex items-center gap-3">
+              <div className="w-5 h-5 bg-purple-500 rounded-full flex items-center justify-center">
+                <span className="text-white text-xs">✓</span>
+              </div>
+              <span className="text-neutral-300 text-sm">
+                <strong>Integração avançada</strong> com sistemas ilimitados
               </span>
             </li>
           </ul>
@@ -199,7 +227,7 @@ export function PricingSection() {
         >
           <div className="flex items-center gap-3 mb-6">
             <div className="w-12 h-12 bg-yellow-500/20 rounded-xl border border-yellow-500/30 flex items-center justify-center">
-              <span className="text-yellow-400 font-bold text-lg">🏢</span>
+              <span className="text-yellow-400 font-bold text-lg">👑</span>
             </div>
             <div>
               <h3 className="text-xl font-bold text-white">Enterprise</h3>
@@ -210,10 +238,10 @@ export function PricingSection() {
           <div className="mb-8">
             <div className="flex items-baseline gap-2">
               <span className="text-4xl font-bold text-white">Sob</span>
-              <span className="text-neutral-400">consulta</span>
+              <span className="text-2xl font-bold text-white">Consulta</span>
             </div>
             <p className="text-neutral-500 text-sm mt-2">
-              Automação ilimitada e personalizada
+              Automação ilimitada de processos complexos
             </p>
           </div>
 
@@ -222,36 +250,49 @@ export function PricingSection() {
               <div className="w-5 h-5 bg-yellow-500 rounded-full flex items-center justify-center">
                 <span className="text-white text-xs">✓</span>
               </div>
-              <span className="text-neutral-300">
-                Automação ilimitada de processos
+              <span className="text-neutral-300 text-sm">
+                <strong>Processos ilimitados</strong> com automação complexa
               </span>
             </li>
             <li className="flex items-center gap-3">
               <div className="w-5 h-5 bg-yellow-500 rounded-full flex items-center justify-center">
                 <span className="text-white text-xs">✓</span>
               </div>
-              <span className="text-neutral-300">
-                IA exclusiva e proprietária
+              <span className="text-neutral-300 text-sm">
+                <strong>IA avançada</strong> com machine learning customizado
               </span>
             </li>
             <li className="flex items-center gap-3">
               <div className="w-5 h-5 bg-yellow-500 rounded-full flex items-center justify-center">
                 <span className="text-white text-xs">✓</span>
               </div>
-              <span className="text-neutral-300">Suporte 24/7 dedicado</span>
+              <span className="text-neutral-300 text-sm">
+                <strong>Equipe dedicada</strong> com arquiteto de soluções 24/7
+              </span>
             </li>
             <li className="flex items-center gap-3">
               <div className="w-5 h-5 bg-yellow-500 rounded-full flex items-center justify-center">
                 <span className="text-white text-xs">✓</span>
               </div>
-              <span className="text-neutral-300">Infraestrutura dedicada</span>
+              <span className="text-neutral-300 text-sm">
+                <strong>Dashboard executivo</strong> com BI integrado e KPIs
+              </span>
             </li>
             <li className="flex items-center gap-3">
               <div className="w-5 h-5 bg-yellow-500 rounded-full flex items-center justify-center">
                 <span className="text-white text-xs">✓</span>
               </div>
-              <span className="text-neutral-300">
-                Consultoria estratégica contínua
+              <span className="text-neutral-300 text-sm">
+                <strong>Consultoria estratégica</strong> mensal + roadmap de
+                evolução
+              </span>
+            </li>
+            <li className="flex items-center gap-3">
+              <div className="w-5 h-5 bg-yellow-500 rounded-full flex items-center justify-center">
+                <span className="text-white text-xs">✓</span>
+              </div>
+              <span className="text-neutral-300 text-sm">
+                <strong>SLA garantido</strong> de 99.9% de uptime
               </span>
             </li>
           </ul>
@@ -261,30 +302,143 @@ export function PricingSection() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Falar com Especialista
+            Falar com Consultor
           </motion.button>
         </motion.div>
       </div>
 
-      {/* Guarantee Section */}
+      {/* Tabela Comparativa Detalhada */}
       <motion.div
-        className="mt-16 bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/20 rounded-2xl p-8 text-center max-w-4xl mx-auto"
+        className="mt-20 max-w-6xl mx-auto"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
         viewport={{ once: true }}
       >
-        <div className="flex items-center justify-center gap-3 mb-4">
-          <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">
-            <span className="text-green-400 text-xl">🛡️</span>
-          </div>
-          <h3 className="text-2xl font-bold text-white">Garantia de 30 Dias</h3>
+        <div className="text-center mb-12">
+          <h3 className="text-3xl font-bold text-white mb-4">
+            Comparação Detalhada dos Planos
+          </h3>
+          <p className="text-neutral-400 max-w-2xl mx-auto">
+            Veja todos os recursos incluídos em cada plano para tomar a melhor
+            decisão para sua empresa
+          </p>
         </div>
-        <p className="text-neutral-300 max-w-2xl mx-auto">
-          Experimente nossa plataforma sem riscos. Se não ficar satisfeito com
-          os resultados da automação em 30 dias, devolvemos 100% do seu
-          investimento.
-        </p>
+
+        <div className="bg-neutral-800/30 backdrop-blur-md border border-neutral-700 rounded-2xl overflow-hidden">
+          <div className="overflow-x-auto">
+            <table className="w-full">
+              <thead className="bg-neutral-700/50">
+                <tr>
+                  <th className="text-left p-4 text-white font-semibold">
+                    Recursos
+                  </th>
+                  <th className="text-center p-4 text-blue-400 font-semibold">
+                    Starter
+                  </th>
+                  <th className="text-center p-4 text-purple-400 font-semibold">
+                    Professional
+                  </th>
+                  <th className="text-center p-4 text-yellow-400 font-semibold">
+                    Enterprise
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="text-neutral-300">
+                <tr className="border-t border-neutral-600">
+                  <td className="p-4 font-medium">Processos Automatizados</td>
+                  <td className="text-center p-4">Até 3</td>
+                  <td className="text-center p-4">Até 10</td>
+                  <td className="text-center p-4">Ilimitado</td>
+                </tr>
+                <tr className="border-t border-neutral-600 bg-neutral-800/20">
+                  <td className="p-4 font-medium">Integrações de Sistemas</td>
+                  <td className="text-center p-4">Até 5 sistemas</td>
+                  <td className="text-center p-4">Ilimitado</td>
+                  <td className="text-center p-4">
+                    Ilimitado + APIs customizadas
+                  </td>
+                </tr>
+                <tr className="border-t border-neutral-600">
+                  <td className="p-4 font-medium">Suporte Técnico</td>
+                  <td className="text-center p-4">Email (24h)</td>
+                  <td className="text-center p-4">
+                    WhatsApp + Gerente dedicado
+                  </td>
+                  <td className="text-center p-4">Equipe dedicada 24/7</td>
+                </tr>
+                <tr className="border-t border-neutral-600 bg-neutral-800/20">
+                  <td className="p-4 font-medium">Dashboard e Relatórios</td>
+                  <td className="text-center p-4">Básico (mensal)</td>
+                  <td className="text-center p-4">Avançado (tempo real)</td>
+                  <td className="text-center p-4">Executivo com BI</td>
+                </tr>
+                <tr className="border-t border-neutral-600">
+                  <td className="p-4 font-medium">Treinamento Incluído</td>
+                  <td className="text-center p-4">4 horas</td>
+                  <td className="text-center p-4">12 horas + certificação</td>
+                  <td className="text-center p-4">Consultoria estratégica</td>
+                </tr>
+                <tr className="border-t border-neutral-600 bg-neutral-800/20">
+                  <td className="p-4 font-medium">Personalização da IA</td>
+                  <td className="text-center p-4">Básica</td>
+                  <td className="text-center p-4">Treinada com seus dados</td>
+                  <td className="text-center p-4">
+                    Machine Learning customizado
+                  </td>
+                </tr>
+                <tr className="border-t border-neutral-600">
+                  <td className="p-4 font-medium">SLA de Uptime</td>
+                  <td className="text-center p-4">99%</td>
+                  <td className="text-center p-4">99.5%</td>
+                  <td className="text-center p-4">99.9%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* CTA Section */}
+      <motion.div
+        className="mt-16 text-center"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-8 max-w-4xl mx-auto">
+          <h3 className="text-2xl font-bold text-white mb-4">
+            Não sabe qual plano escolher?
+          </h3>
+          <p className="text-neutral-300 mb-6 max-w-2xl mx-auto">
+            Agende uma{" "}
+            <strong className="text-blue-400">consultoria gratuita</strong> e
+            nossos especialistas ajudarão você a identificar o plano ideal para
+            suas necessidades específicas.
+          </p>
+          <motion.a
+            href="#contato"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-8 py-4 rounded-full hover:from-blue-500 hover:to-purple-500 transition-all duration-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span>Falar com Especialista</span>
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-3.582 8-8 8a8.959 8.959 0 01-4.906-1.414L3 21l1.414-5.094A8.959 8.959 0 013 12c0-4.418 3.582-8 8-8s8 3.582 8 8z"
+              />
+            </svg>
+          </motion.a>
+        </div>
       </motion.div>
     </section>
   );

@@ -27,10 +27,10 @@ import { useState } from "react";
 export default function Home() {
   const navItems = [
     { name: "Como Funciona", link: "#como-funciona" },
-    { name: "Exemplos Práticos", link: "#exemplos" },
-    { name: "Planos e Preços", link: "#planos" },
-    { name: "Perguntas Frequentes", link: "#faq" },
-    { name: "Contato", link: "#contato" },
+    { name: "Resultados Reais", link: "#exemplos" },
+    { name: "Planos", link: "#planos" },
+    { name: "FAQ", link: "#faq" },
+    { name: "Análise Gratuita", link: "#contato" },
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -45,7 +45,7 @@ export default function Home() {
             <NavbarLogo />
             <NavItems items={navItems} />
             <div className="flex items-center gap-4">
-              <NavbarButton variant="primary">Quero automatizar</NavbarButton>
+              <NavbarButton variant="primary">Análise Gratuita</NavbarButton>
             </div>
           </NavBody>
 
@@ -79,14 +79,7 @@ export default function Home() {
                   variant="primary"
                   className="w-full"
                 >
-                  Login
-                </NavbarButton>
-                <NavbarButton
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  variant="primary"
-                  className="w-full"
-                >
-                  Book a call
+                  Análise Gratuita
                 </NavbarButton>
               </div>
             </MobileNavMenu>
