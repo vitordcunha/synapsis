@@ -2,142 +2,40 @@ import { Cover } from "@/components/ui/cover";
 import React from "react";
 import { motion } from "motion/react";
 
-// Componente para estrelas animadas
+// Componente para estrelas animadas no fundo
 function StarryBackground() {
   const stars = React.useMemo(() => {
-    return Array.from({ length: 50 }, (_, i) => {
-      const animationType = Math.random();
-      let animation = "animate-pulse";
-
-      if (animationType < 0.3) {
-        animation = "animate-bounce-slow";
-      } else if (animationType < 0.6) {
-        animation = "animate-twinkle";
-      } else if (animationType < 0.8) {
-        animation = "animate-float";
-      } else {
-        animation = "animate-spin-slow";
-      }
-
+    return Array.from({ length: 60 }, (_, i) => {
       return {
         id: i,
         x: Math.random() * 100,
         y: Math.random() * 100,
-        size: Math.random() * 3 + 1,
-        opacity: Math.random() * 0.6 + 0.2,
+        size: Math.random() * 1.5 + 0.5,
+        opacity: Math.random() * 0.3 + 0.1,
         delay: Math.random() * 5,
-        animation,
-        duration: 2 + Math.random() * 4,
+        duration: 3 + Math.random() * 4,
       };
     });
   }, []);
 
   return (
-    <>
-      <style jsx>{`
-        @keyframes twinkle {
-          0%,
-          100% {
-            opacity: 0.2;
-            transform: scale(1);
-          }
-          50% {
-            opacity: 1;
-            transform: scale(1.2);
-          }
-        }
-
-        @keyframes float {
-          0%,
-          100% {
-            transform: translateY(0px) rotate(0deg);
-          }
-          50% {
-            transform: translateY(-10px) rotate(180deg);
-          }
-        }
-
-        @keyframes bounce-slow {
-          0%,
-          100% {
-            transform: translateY(0px);
-            opacity: 0.3;
-          }
-          50% {
-            transform: translateY(-5px);
-            opacity: 0.8;
-          }
-        }
-
-        @keyframes spin-slow {
-          0% {
-            transform: rotate(0deg) scale(1);
-          }
-          50% {
-            transform: rotate(180deg) scale(1.3);
-          }
-          100% {
-            transform: rotate(360deg) scale(1);
-          }
-        }
-
-        .animate-twinkle {
-          animation: twinkle var(--duration) ease-in-out infinite;
-        }
-
-        .animate-float {
-          animation: float var(--duration) ease-in-out infinite;
-        }
-
-        .animate-bounce-slow {
-          animation: bounce-slow var(--duration) ease-in-out infinite;
-        }
-
-        .animate-spin-slow {
-          animation: spin-slow var(--duration) linear infinite;
-        }
-      `}</style>
-
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {stars.map((star) => (
-          <div
-            key={star.id}
-            className={`absolute rounded-full bg-white ${star.animation}`}
-            style={
-              {
-                left: `${star.x}%`,
-                top: `${star.y}%`,
-                width: `${star.size}px`,
-                height: `${star.size}px`,
-                opacity: star.opacity,
-                animationDelay: `${star.delay}s`,
-                "--duration": `${star.duration}s`,
-              } as React.CSSProperties
-            }
-          />
-        ))}
-
-        {/* Estrelas especiais com brilho */}
-        {Array.from({ length: 8 }, (_, i) => (
-          <div
-            key={`special-${i}`}
-            className="absolute animate-pulse"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${3 + Math.random() * 2}s`,
-            }}
-          >
-            <div className="relative">
-              <div className="w-2 h-2 bg-white rounded-full opacity-80"></div>
-              <div className="absolute inset-0 w-2 h-2 bg-white rounded-full animate-ping opacity-30"></div>
-              <div className="absolute -inset-1 w-4 h-4 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full blur-sm opacity-20"></div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </>
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {stars.map((star) => (
+        <div
+          key={star.id}
+          className="absolute rounded-full bg-white animate-pulse"
+          style={{
+            left: `${star.x}%`,
+            top: `${star.y}%`,
+            width: `${star.size}px`,
+            height: `${star.size}px`,
+            opacity: star.opacity,
+            animationDelay: `${star.delay}s`,
+            animationDuration: `${star.duration}s`,
+          }}
+        />
+      ))}
+    </div>
   );
 }
 
@@ -146,40 +44,402 @@ export function HeroSection() {
     <>
       <StarryBackground />
 
-      <section className="relative flex flex-col items-center justify-center text-center h-full w-full mb-20 gap-10 mt-20">
-        <motion.h1
-          className="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg bg-gradient-to-b from-background to-foreground bg-clip-text text-transparent"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          Automação de Processos com IA para sua <br />
-          <Cover>Empresa</Cover>
-        </motion.h1>
+      <section className="relative w-full min-h-screen flex items-center py-20">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            {/* Conteúdo principal à esquerda */}
+            <div className="flex flex-col justify-center space-y-12">
+              {/* Título principal */}
+              <motion.div
+                initial={{ opacity: 0, y: 60 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.2 }}
+                className="space-y-6"
+              >
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[0.9] tracking-tight">
+                  <span className="bg-gradient-to-b from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
+                    Automação de
+                    <br />
+                    Processos com IA
+                    <br />
+                    para sua{" "}
+                  </span>
+                  <Cover>Empresa</Cover>
+                </h1>
+              </motion.div>
 
-        <motion.h2
-          className="text-lg text-neutral-400 mb-8 max-w-xl"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          Transforme tarefas manuais em processos automatizados inteligentes.
-          Aumente a eficiência operacional em até 95% e reduza custos com
-          inteligência artificial personalizada para seu negócio.
-        </motion.h2>
+              {/* Descrição */}
+              <motion.div
+                className="space-y-6"
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >
+                <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-2xl">
+                  Transforme tarefas manuais em processos automatizados
+                  inteligentes.
+                </p>
+                <p className="text-lg text-gray-400 leading-relaxed max-w-2xl">
+                  <span className="text-purple-400 font-bold text-xl">
+                    Aumente a eficiência em até 95%
+                  </span>{" "}
+                  e reduza custos operacionais com inteligência artificial
+                  personalizada para seu negócio.
+                </p>
+              </motion.div>
 
-        <motion.a
-          href="#como-funciona"
-          className="bg-white/10 text-white font-semibold px-8 py-3 rounded-full shadow-lg backdrop-blur-md border border-white/10 mb-16 hover:bg-white/20 transition"
-          aria-label="Começar automação de processos com IA"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.0 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Automatizar Meus Processos
-        </motion.a>
+              {/* Botões de ação */}
+              <motion.div
+                className="flex flex-col sm:flex-row gap-6"
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1.0 }}
+              >
+                <motion.a
+                  href="#como-funciona"
+                  className="group inline-flex items-center justify-center bg-gradient-to-r from-purple-600 via-purple-700 to-blue-600 text-white font-bold px-10 py-5 rounded-2xl shadow-2xl hover:shadow-purple-500/30 transition-all duration-300 text-lg border border-purple-500/20"
+                  whileHover={{ scale: 1.05, y: -3 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <span className="mr-3 text-xl">🚀</span>
+                  Automatizar Meus Processos
+                  <motion.span className="ml-2 group-hover:translate-x-1 transition-transform duration-200">
+                    →
+                  </motion.span>
+                </motion.a>
+
+                <motion.a
+                  href="#exemplos"
+                  className="inline-flex items-center justify-center bg-gray-800/50 border-2 border-gray-600 text-gray-300 font-semibold px-10 py-5 rounded-2xl hover:border-purple-400 hover:text-white hover:bg-gray-700/50 transition-all duration-300 text-lg backdrop-blur-sm"
+                  whileHover={{ scale: 1.05, y: -3 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  Ver Exemplos Práticos
+                </motion.a>
+              </motion.div>
+
+              {/* Métricas */}
+              <motion.div
+                className="grid grid-cols-3 gap-8 pt-12 border-t border-gray-800/50"
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1.4 }}
+              >
+                <div className="text-center space-y-2">
+                  <div className="text-4xl font-black bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
+                    95%
+                  </div>
+                  <div className="text-sm text-gray-400 font-medium">
+                    Menos tempo gasto
+                  </div>
+                </div>
+                <div className="text-center space-y-2">
+                  <div className="text-4xl font-black bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                    24/7
+                  </div>
+                  <div className="text-sm text-gray-400 font-medium">
+                    Funcionamento
+                  </div>
+                </div>
+                <div className="text-center space-y-2">
+                  <div className="text-4xl font-black bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+                    100%
+                  </div>
+                  <div className="text-sm text-gray-400 font-medium">
+                    Precisão
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Animação à direita */}
+            <motion.div
+              className="relative flex items-center justify-center min-h-[700px]"
+              initial={{ opacity: 0, scale: 0.8, x: 100 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 1.2, delay: 0.4 }}
+            >
+              <div className="relative w-full h-full max-w-lg mx-auto">
+                <div className="relative bg-black/90 rounded-2xl p-8 border border-gray-700/60 backdrop-blur-xl shadow-2xl">
+                  {/* Cabeçalho da automação */}
+                  <motion.div
+                    className="text-center mb-8"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                  >
+                    <h3 className="text-white font-bold text-lg mb-2">
+                      Fluxo de Automação
+                    </h3>
+                    <p className="text-gray-400 text-sm">
+                      Exemplo: Reativação de Clientes
+                    </p>
+                  </motion.div>
+
+                  {/* Gatilho inicial */}
+                  <div className="border-2 border-dashed border-purple-400/40 rounded-xl p-6 mb-8 relative bg-purple-500/5">
+                    <div className="absolute -top-3 left-6 bg-black px-3 py-1 rounded-full border border-purple-400/50">
+                      <span className="text-xs text-purple-400 font-semibold">
+                        🚀 Gatilho Inicial
+                      </span>
+                    </div>
+                    <div className="absolute -top-3 right-6 bg-black px-3 py-1 rounded-full border border-gray-600">
+                      <span className="text-xs text-gray-400">3 ações</span>
+                    </div>
+
+                    {/* Execução diária */}
+                    <motion.div
+                      className="bg-gray-800/90 rounded-xl p-5 border border-gray-600/50 hover:border-purple-400/60 transition-all duration-500 mb-6"
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.8, delay: 0.5 }}
+                    >
+                      <div className="flex items-center space-x-4">
+                        <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+                          <svg
+                            className="w-5 h-5 text-white"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                            />
+                          </svg>
+                        </div>
+                        <div>
+                          <h4 className="text-white font-semibold">
+                            Todos os Dias
+                          </h4>
+                          <p className="text-gray-400 text-sm">
+                            Execução automática às 9h
+                          </p>
+                        </div>
+                      </div>
+                    </motion.div>
+
+                    {/* Conexão */}
+                    <motion.div
+                      className="flex justify-center my-6"
+                      initial={{ opacity: 0, scale: 0 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.6, delay: 1.0 }}
+                    >
+                      <motion.div
+                        className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg border-2 border-purple-400/50"
+                        animate={{
+                          boxShadow: [
+                            "0 0 0 0 rgba(168, 85, 247, 0.4)",
+                            "0 0 0 8px rgba(168, 85, 247, 0)",
+                            "0 0 0 0 rgba(168, 85, 247, 0.4)",
+                          ],
+                        }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          delay: 1.5,
+                        }}
+                      >
+                        +
+                      </motion.div>
+                    </motion.div>
+
+                    {/* Buscar clientes */}
+                    <motion.div
+                      className="bg-gray-800/90 rounded-xl p-5 border border-gray-600/50 hover:border-blue-400/60 transition-all duration-500"
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.8, delay: 1.8 }}
+                    >
+                      <div className="flex items-center space-x-4">
+                        <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
+                          <svg
+                            className="w-5 h-5 text-white"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                            />
+                          </svg>
+                        </div>
+                        <div>
+                          <h4 className="text-white font-semibold">
+                            Buscar Clientes
+                          </h4>
+                          <p className="text-gray-400 text-sm">
+                            Filtrar base de dados
+                          </p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  </div>
+
+                  {/* Conexão externa */}
+                  <motion.div
+                    className="flex justify-center my-8"
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6, delay: 2.5 }}
+                  >
+                    <motion.div
+                      className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg border-2 border-blue-400/50"
+                      animate={{
+                        boxShadow: [
+                          "0 0 0 0 rgba(59, 130, 246, 0.4)",
+                          "0 0 0 8px rgba(59, 130, 246, 0)",
+                          "0 0 0 0 rgba(59, 130, 246, 0.4)",
+                        ],
+                      }}
+                      transition={{ duration: 2, repeat: Infinity, delay: 3.0 }}
+                    >
+                      +
+                    </motion.div>
+                  </motion.div>
+
+                  {/* Verificação de atividade */}
+                  <motion.div
+                    className="bg-gray-800/90 rounded-xl p-5 border border-gray-600/50 hover:border-cyan-400/60 transition-all duration-500 mb-8"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8, delay: 3.2 }}
+                  >
+                    <div className="flex items-center space-x-4">
+                      <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-lg">
+                        <svg
+                          className="w-5 h-5 text-white"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 className="text-white font-semibold">
+                          Verificar Atividade
+                        </h4>
+                        <p className="text-gray-400 text-sm">
+                          Cliente ativo nos últimos 6 meses?
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  {/* Decisão SIM/NÃO */}
+                  <motion.div
+                    className="flex justify-between items-center my-8 px-4"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.8, delay: 4.0 }}
+                  >
+                    <div className="flex flex-col items-center">
+                      <div className="bg-green-600/20 border border-green-500/60 text-green-400 px-4 py-2 rounded-lg text-sm font-bold mb-3 shadow-lg">
+                        SIM
+                      </div>
+                      <motion.div
+                        className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg border-2 border-green-400/50"
+                        animate={{
+                          boxShadow: [
+                            "0 0 0 0 rgba(34, 197, 94, 0.4)",
+                            "0 0 0 8px rgba(34, 197, 94, 0)",
+                            "0 0 0 0 rgba(34, 197, 94, 0.4)",
+                          ],
+                        }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          delay: 4.5,
+                        }}
+                      >
+                        ✓
+                      </motion.div>
+                    </div>
+
+                    <div className="flex flex-col items-center opacity-40">
+                      <div className="bg-gray-700/50 border border-gray-600/50 text-gray-500 px-4 py-2 rounded-lg text-sm font-semibold mb-3">
+                        NÃO
+                      </div>
+                      <div className="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center text-gray-400 font-bold border-2 border-gray-500/50">
+                        ✗
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  {/* Ação final */}
+                  <motion.div
+                    className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-xl p-6 border-2 border-purple-400/60 relative overflow-hidden"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8, delay: 5.0 }}
+                  >
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10"
+                      animate={{
+                        opacity: [0.1, 0.4, 0.1],
+                      }}
+                      transition={{ duration: 2, repeat: Infinity, delay: 5.5 }}
+                    />
+                    <div className="relative flex items-center justify-between">
+                      <div className="flex items-center space-x-4">
+                        <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-xl">
+                          <svg
+                            className="w-6 h-6 text-white"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M3 8l7.89 3.26a2 2 0 001.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                            />
+                          </svg>
+                        </div>
+                        <div>
+                          <h4 className="text-white font-bold text-lg">
+                            Email Enviado!
+                          </h4>
+                          <p className="text-gray-300 text-sm">
+                            Oferta de reativação personalizada
+                          </p>
+                        </div>
+                      </div>
+                      <motion.div
+                        animate={{
+                          scale: [1, 1.3, 1],
+                          rotate: [0, 10, -10, 0],
+                        }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          delay: 6.0,
+                        }}
+                      >
+                        <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg border-2 border-green-400">
+                          🎉
+                        </div>
+                      </motion.div>
+                    </div>
+                  </motion.div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
       </section>
     </>
   );
