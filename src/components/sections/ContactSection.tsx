@@ -22,10 +22,10 @@ export function ContactSection() {
         </HoverBorderGradient>
 
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          Receba uma Análise de Automação
+          Fale com um Especialista em Automação
           <br />
           <span className="text-gradient bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            100% Gratuita
+            Receba um Diagnóstico Gratuito
           </span>
         </h2>
         <p className="text-xl text-neutral-300 max-w-3xl leading-relaxed">
@@ -49,7 +49,7 @@ export function ContactSection() {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-bold text-white mb-6">
-              Solicite sua Análise Gratuita
+              Receba Seu Diagnóstico de Automação Gratuito
             </h3>
 
             <form className="space-y-6">

@@ -72,7 +72,8 @@ export function PricingSection() {
                 <span className="text-white text-xs">✓</span>
               </div>
               <span className="text-neutral-300 text-sm">
-                <strong>Até 3 processos</strong> automatizados por departamento
+                <strong>Automação de até 5 processos</strong> departamentais
+                simples
               </span>
             </li>
             <li className="flex items-center gap-3">
@@ -80,7 +81,8 @@ export function PricingSection() {
                 <span className="text-white text-xs">✓</span>
               </div>
               <span className="text-neutral-300 text-sm">
-                <strong>Integração básica</strong> com até 5 sistemas existentes
+                <strong>Integração com até 5 sistemas</strong> existentes (CRM,
+                ERP básico)
               </span>
             </li>
             <li className="flex items-center gap-3">
@@ -88,7 +90,7 @@ export function PricingSection() {
                 <span className="text-white text-xs">✓</span>
               </div>
               <span className="text-neutral-300 text-sm">
-                <strong>Suporte via email</strong> (resposta em até 24h)
+                <strong>Suporte via email</strong> com resposta garantida em 24h
               </span>
             </li>
             <li className="flex items-center gap-3">
@@ -96,7 +98,8 @@ export function PricingSection() {
                 <span className="text-white text-xs">✓</span>
               </div>
               <span className="text-neutral-300 text-sm">
-                <strong>Dashboard básico</strong> com relatórios mensais
+                <strong>Dashboard básico</strong> com relatórios mensais e
+                métricas essenciais
               </span>
             </li>
             <li className="flex items-center gap-3">
@@ -104,7 +107,8 @@ export function PricingSection() {
                 <span className="text-white text-xs">✓</span>
               </div>
               <span className="text-neutral-300 text-sm">
-                <strong>Treinamento inicial</strong> de 4 horas para equipe
+                <strong>Treinamento inicial de 4 horas</strong> para até 3
+                colaboradores
               </span>
             </li>
           </ul>
@@ -159,8 +163,8 @@ export function PricingSection() {
                 <span className="text-white text-xs">✓</span>
               </div>
               <span className="text-neutral-300 text-sm">
-                <strong>Até 10 processos</strong> automatizados entre
-                departamentos
+                <strong>Automação de até 20 processos</strong>{" "}
+                interdepartamentais complexos
               </span>
             </li>
             <li className="flex items-center gap-3">
@@ -168,8 +172,8 @@ export function PricingSection() {
                 <span className="text-white text-xs">✓</span>
               </div>
               <span className="text-neutral-300 text-sm">
-                <strong>IA personalizada</strong> treinada com dados do seu
-                negócio
+                <strong>IA personalizada</strong> treinada com histórico dos
+                seus dados
               </span>
             </li>
             <li className="flex items-center gap-3">
@@ -177,8 +181,8 @@ export function PricingSection() {
                 <span className="text-white text-xs">✓</span>
               </div>
               <span className="text-neutral-300 text-sm">
-                <strong>Gerente de conta dedicado</strong> + suporte via
-                WhatsApp
+                <strong>Suporte via chat dedicado</strong> + gerente de conta
+                exclusivo
               </span>
             </li>
             <li className="flex items-center gap-3">
@@ -186,7 +190,8 @@ export function PricingSection() {
                 <span className="text-white text-xs">✓</span>
               </div>
               <span className="text-neutral-300 text-sm">
-                <strong>Dashboard avançado</strong> com relatórios em tempo real
+                <strong>Relatórios customizáveis</strong> em tempo real com
+                alertas automáticos
               </span>
             </li>
             <li className="flex items-center gap-3">
@@ -194,7 +199,8 @@ export function PricingSection() {
                 <span className="text-white text-xs">✓</span>
               </div>
               <span className="text-neutral-300 text-sm">
-                <strong>Treinamento completo</strong> de 12 horas + certificação
+                <strong>Treinamento completo de 12 horas</strong> + certificação
+                da equipe
               </span>
             </li>
             <li className="flex items-center gap-3">
@@ -202,7 +208,8 @@ export function PricingSection() {
                 <span className="text-white text-xs">✓</span>
               </div>
               <span className="text-neutral-300 text-sm">
-                <strong>Integração avançada</strong> com sistemas ilimitados
+                <strong>Integrações ilimitadas</strong> incluindo APIs
+                customizadas
               </span>
             </li>
           </ul>
@@ -251,7 +258,8 @@ export function PricingSection() {
                 <span className="text-white text-xs">✓</span>
               </div>
               <span className="text-neutral-300 text-sm">
-                <strong>Processos ilimitados</strong> com automação complexa
+                <strong>Automação ilimitada</strong> de processos de alta
+                complexidade
               </span>
             </li>
             <li className="flex items-center gap-3">
@@ -259,7 +267,8 @@ export function PricingSection() {
                 <span className="text-white text-xs">✓</span>
               </div>
               <span className="text-neutral-300 text-sm">
-                <strong>IA avançada</strong> com machine learning customizado
+                <strong>Machine Learning avançado</strong> com modelos
+                proprietários
               </span>
             </li>
             <li className="flex items-center gap-3">
@@ -267,7 +276,8 @@ export function PricingSection() {
                 <span className="text-white text-xs">✓</span>
               </div>
               <span className="text-neutral-300 text-sm">
-                <strong>Equipe dedicada</strong> com arquiteto de soluções 24/7
+                <strong>Equipe técnica dedicada 24/7</strong> + arquiteto de
+                soluções
               </span>
             </li>
             <li className="flex items-center gap-3">
@@ -275,7 +285,8 @@ export function PricingSection() {
                 <span className="text-white text-xs">✓</span>
               </div>
               <span className="text-neutral-300 text-sm">
-                <strong>Dashboard executivo</strong> com BI integrado e KPIs
+                <strong>Integração com BI</strong> (Power BI, Tableau, Qlik) e
+                dados em tempo real
               </span>
             </li>
             <li className="flex items-center gap-3">
@@ -283,8 +294,8 @@ export function PricingSection() {
                 <span className="text-white text-xs">✓</span>
               </div>
               <span className="text-neutral-300 text-sm">
-                <strong>Consultoria estratégica</strong> mensal + roadmap de
-                evolução
+                <strong>Consultoria estratégica mensal</strong> + roadmap de
+                inovação
               </span>
             </li>
             <li className="flex items-center gap-3">
@@ -292,7 +303,7 @@ export function PricingSection() {
                 <span className="text-white text-xs">✓</span>
               </div>
               <span className="text-neutral-300 text-sm">
-                <strong>SLA garantido</strong> de 99.9% de uptime
+                <strong>SLA Premium</strong> com 99.9% de uptime garantido
               </span>
             </li>
           </ul>
@@ -347,44 +358,50 @@ export function PricingSection() {
               <tbody className="text-neutral-300">
                 <tr className="border-t border-neutral-600">
                   <td className="p-4 font-medium">Processos Automatizados</td>
-                  <td className="text-center p-4">Até 3</td>
-                  <td className="text-center p-4">Até 10</td>
+                  <td className="text-center p-4">Até 5</td>
+                  <td className="text-center p-4">Até 20</td>
                   <td className="text-center p-4">Ilimitado</td>
                 </tr>
                 <tr className="border-t border-neutral-600 bg-neutral-800/20">
                   <td className="p-4 font-medium">Integrações de Sistemas</td>
-                  <td className="text-center p-4">Até 5 sistemas</td>
-                  <td className="text-center p-4">Ilimitado</td>
+                  <td className="text-center p-4">Até 5 sistemas básicos</td>
+                  <td className="text-center p-4">Ilimitadas + APIs</td>
                   <td className="text-center p-4">
-                    Ilimitado + APIs customizadas
+                    Ilimitadas + BI + APIs customizadas
                   </td>
                 </tr>
                 <tr className="border-t border-neutral-600">
                   <td className="p-4 font-medium">Suporte Técnico</td>
-                  <td className="text-center p-4">Email (24h)</td>
+                  <td className="text-center p-4">Email (resposta 24h)</td>
                   <td className="text-center p-4">
-                    WhatsApp + Gerente dedicado
+                    Chat dedicado + Gerente de conta
                   </td>
                   <td className="text-center p-4">Equipe dedicada 24/7</td>
                 </tr>
                 <tr className="border-t border-neutral-600 bg-neutral-800/20">
                   <td className="p-4 font-medium">Dashboard e Relatórios</td>
-                  <td className="text-center p-4">Básico (mensal)</td>
-                  <td className="text-center p-4">Avançado (tempo real)</td>
-                  <td className="text-center p-4">Executivo com BI</td>
+                  <td className="text-center p-4">
+                    Básico (relatórios mensais)
+                  </td>
+                  <td className="text-center p-4">Customizável (tempo real)</td>
+                  <td className="text-center p-4">
+                    Executivo com BI integrado
+                  </td>
                 </tr>
                 <tr className="border-t border-neutral-600">
                   <td className="p-4 font-medium">Treinamento Incluído</td>
-                  <td className="text-center p-4">4 horas</td>
+                  <td className="text-center p-4">4 horas (até 3 pessoas)</td>
                   <td className="text-center p-4">12 horas + certificação</td>
-                  <td className="text-center p-4">Consultoria estratégica</td>
+                  <td className="text-center p-4">
+                    Consultoria estratégica ilimitada
+                  </td>
                 </tr>
                 <tr className="border-t border-neutral-600 bg-neutral-800/20">
                   <td className="p-4 font-medium">Personalização da IA</td>
-                  <td className="text-center p-4">Básica</td>
+                  <td className="text-center p-4">Modelos padrão</td>
                   <td className="text-center p-4">Treinada com seus dados</td>
                   <td className="text-center p-4">
-                    Machine Learning customizado
+                    Machine Learning proprietário
                   </td>
                 </tr>
                 <tr className="border-t border-neutral-600">

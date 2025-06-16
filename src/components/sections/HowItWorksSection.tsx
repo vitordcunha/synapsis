@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 export function HowItWorksSection() {
   return (
-    <section id="como-funciona" className="w-full mt-32">
+    <section id="como-funciona" className="w-full">
       <motion.div
         className="text-center mb-16 flex items-center flex-col gap-5"
         initial={{ opacity: 0, y: 30 }}
