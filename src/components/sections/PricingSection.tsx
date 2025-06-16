@@ -2,17 +2,72 @@ import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { motion } from "motion/react";
 
 export function PricingSection() {
+  const plans = [
+    {
+      name: "Starter",
+      icon: "🚀",
+      subtitle: "Para pequenas empresas",
+      price: "R$ 2.997",
+      period: "/mês",
+      description: "Automação essencial para começar",
+      features: [
+        "Até 5 processos automatizados",
+        "5 integrações de sistemas",
+        "Suporte via email (24h)",
+        "Dashboard básico",
+        "Treinamento de 4 horas",
+      ],
+      color: "blue",
+      popular: false,
+    },
+    {
+      name: "Professional",
+      icon: "⭐",
+      subtitle: "Para médias empresas",
+      price: "R$ 5.997",
+      period: "/mês",
+      description: "Automação completa + IA personalizada",
+      features: [
+        "Até 20 processos automatizados",
+        "IA treinada com seus dados",
+        "Suporte chat + gerente dedicado",
+        "Relatórios em tempo real",
+        "Treinamento completo 12h",
+      ],
+      color: "purple",
+      popular: true,
+    },
+    {
+      name: "Enterprise",
+      icon: "👑",
+      subtitle: "Para grandes empresas",
+      price: "Sob Consulta",
+      period: "",
+      description: "Automação ilimitada + consultoria",
+      features: [
+        "Processos ilimitados",
+        "Machine Learning avançado",
+        "Equipe técnica 24/7",
+        "Integração com BI",
+        "Consultoria estratégica",
+      ],
+      color: "yellow",
+      popular: false,
+    },
+  ];
+
   return (
     <section id="planos" className="w-full mt-32">
+      {/* Header padrão do site */}
       <motion.div
-        className="text-center mb-16 flex items-center flex-col gap-5"
+        className="text-center mb-12 flex items-center flex-col"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
         <HoverBorderGradient
-          containerClassName="rounded-full border-border"
+          containerClassName="rounded-full border-border mb-6"
           as="div"
           className="bg-background text-foreground flex items-center space-x-2"
         >
@@ -22,427 +77,166 @@ export function PricingSection() {
         </HoverBorderGradient>
 
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          Planos Flexíveis para Automação Empresarial com IA
+          Planos Flexíveis para Automação com IA
         </h2>
         <p className="text-xl text-neutral-300 max-w-3xl leading-relaxed">
           Escolha o plano ideal para{" "}
           <strong>transformar seus processos manuais</strong> em automação
-          inteligente. Todos os planos incluem{" "}
-          <strong className="text-blue-400">
-            suporte técnico especializado
-          </strong>{" "}
-          e <strong className="text-green-400">integração personalizada</strong>
-          .
+          inteligente. Todos incluem{" "}
+          <strong className="text-blue-400">suporte especializado</strong> e{" "}
+          <strong className="text-green-400">integração personalizada</strong>.
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {/* Plano Starter */}
-        <motion.div
-          className="bg-neutral-800/50 backdrop-blur-md border border-neutral-700 rounded-2xl p-8 hover:border-blue-600/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          viewport={{ once: true }}
-          whileHover={{ scale: 1.02, y: -5 }}
-        >
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 bg-blue-500/20 rounded-xl border border-blue-500/30 flex items-center justify-center">
-              <span className="text-blue-400 font-bold text-lg">🚀</span>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-white">Starter</h3>
-              <p className="text-blue-400 text-sm">Para pequenas empresas</p>
-            </div>
-          </div>
-
-          <div className="mb-8">
-            <div className="flex items-baseline gap-2">
-              <span className="text-4xl font-bold text-white">R$ 2.997</span>
-              <span className="text-neutral-400">/mês</span>
-            </div>
-            <p className="text-neutral-500 text-sm mt-2">
-              Automação de até 3 processos departamentais
-            </p>
-          </div>
-
-          <ul className="space-y-4 mb-8">
-            <li className="flex items-center gap-3">
-              <div className="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center">
-                <span className="text-white text-xs">✓</span>
-              </div>
-              <span className="text-neutral-300 text-sm">
-                <strong>Automação de até 5 processos</strong> departamentais
-                simples
-              </span>
-            </li>
-            <li className="flex items-center gap-3">
-              <div className="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center">
-                <span className="text-white text-xs">✓</span>
-              </div>
-              <span className="text-neutral-300 text-sm">
-                <strong>Integração com até 5 sistemas</strong> existentes (CRM,
-                ERP básico)
-              </span>
-            </li>
-            <li className="flex items-center gap-3">
-              <div className="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center">
-                <span className="text-white text-xs">✓</span>
-              </div>
-              <span className="text-neutral-300 text-sm">
-                <strong>Suporte via email</strong> com resposta garantida em 24h
-              </span>
-            </li>
-            <li className="flex items-center gap-3">
-              <div className="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center">
-                <span className="text-white text-xs">✓</span>
-              </div>
-              <span className="text-neutral-300 text-sm">
-                <strong>Dashboard básico</strong> com relatórios mensais e
-                métricas essenciais
-              </span>
-            </li>
-            <li className="flex items-center gap-3">
-              <div className="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center">
-                <span className="text-white text-xs">✓</span>
-              </div>
-              <span className="text-neutral-300 text-sm">
-                <strong>Treinamento inicial de 4 horas</strong> para até 3
-                colaboradores
-              </span>
-            </li>
-          </ul>
-
-          <motion.button
-            className="w-full bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700 transition-colors font-semibold"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+      {/* Cards dos planos */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {plans.map((plan, index) => (
+          <motion.div
+            key={plan.name}
+            className={`relative bg-neutral-800/50 backdrop-blur-md border rounded-2xl p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 ${
+              plan.popular
+                ? "border-purple-500/50 bg-gradient-to-b from-purple-900/30 to-purple-800/20 shadow-purple-500/20"
+                : "border-neutral-700 hover:border-neutral-600"
+            }`}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.02 }}
           >
-            Escolher Starter
-          </motion.button>
-        </motion.div>
+            {/* Badge popular */}
+            {plan.popular && (
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                <div className="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-bold">
+                  MAIS POPULAR
+                </div>
+              </div>
+            )}
 
-        {/* Plano Professional - Destaque */}
-        <motion.div
-          className="bg-gradient-to-b from-purple-900/50 to-purple-800/30 backdrop-blur-md border-2 border-purple-500/50 rounded-2xl p-8 relative hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          whileHover={{ scale: 1.05, y: -10 }}
-        >
-          <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-            <div className="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-bold">
-              MAIS POPULAR
+            {/* Header do plano */}
+            <div className="flex items-center gap-3 mb-4">
+              <div
+                className={`w-10 h-10 bg-${plan.color}-500/20 rounded-xl border border-${plan.color}-500/30 flex items-center justify-center`}
+              >
+                <span className={`text-${plan.color}-400 text-lg`}>
+                  {plan.icon}
+                </span>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white">{plan.name}</h3>
+                <p className={`text-${plan.color}-400 text-xs`}>
+                  {plan.subtitle}
+                </p>
+              </div>
             </div>
-          </div>
 
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 bg-purple-500/20 rounded-xl border border-purple-500/30 flex items-center justify-center">
-              <span className="text-purple-400 font-bold text-lg">⭐</span>
+            {/* Preço */}
+            <div className="mb-4">
+              <div className="flex items-baseline gap-1">
+                <span className="text-2xl font-bold text-white">
+                  {plan.price}
+                </span>
+                <span className="text-neutral-400 text-sm">{plan.period}</span>
+              </div>
+              <p className="text-neutral-500 text-sm mt-1">
+                {plan.description}
+              </p>
             </div>
-            <div>
-              <h3 className="text-xl font-bold text-white">Professional</h3>
-              <p className="text-purple-400 text-sm">Para médias empresas</p>
-            </div>
-          </div>
 
-          <div className="mb-8">
-            <div className="flex items-baseline gap-2">
-              <span className="text-4xl font-bold text-white">R$ 5.997</span>
-              <span className="text-neutral-400">/mês</span>
-            </div>
-            <p className="text-neutral-500 text-sm mt-2">
-              Automação de até 10 processos interdepartamentais
-            </p>
-          </div>
+            {/* Features */}
+            <ul className="space-y-2 mb-6">
+              {plan.features.map((feature, featureIndex) => (
+                <li key={featureIndex} className="flex items-start gap-2">
+                  <div
+                    className={`w-4 h-4 bg-${plan.color}-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5`}
+                  >
+                    <span className="text-white text-xs">✓</span>
+                  </div>
+                  <span className="text-neutral-300 text-sm">{feature}</span>
+                </li>
+              ))}
+            </ul>
 
-          <ul className="space-y-4 mb-8">
-            <li className="flex items-center gap-3">
-              <div className="w-5 h-5 bg-purple-500 rounded-full flex items-center justify-center">
-                <span className="text-white text-xs">✓</span>
-              </div>
-              <span className="text-neutral-300 text-sm">
-                <strong>Automação de até 20 processos</strong>{" "}
-                interdepartamentais complexos
-              </span>
-            </li>
-            <li className="flex items-center gap-3">
-              <div className="w-5 h-5 bg-purple-500 rounded-full flex items-center justify-center">
-                <span className="text-white text-xs">✓</span>
-              </div>
-              <span className="text-neutral-300 text-sm">
-                <strong>IA personalizada</strong> treinada com histórico dos
-                seus dados
-              </span>
-            </li>
-            <li className="flex items-center gap-3">
-              <div className="w-5 h-5 bg-purple-500 rounded-full flex items-center justify-center">
-                <span className="text-white text-xs">✓</span>
-              </div>
-              <span className="text-neutral-300 text-sm">
-                <strong>Suporte via chat dedicado</strong> + gerente de conta
-                exclusivo
-              </span>
-            </li>
-            <li className="flex items-center gap-3">
-              <div className="w-5 h-5 bg-purple-500 rounded-full flex items-center justify-center">
-                <span className="text-white text-xs">✓</span>
-              </div>
-              <span className="text-neutral-300 text-sm">
-                <strong>Relatórios customizáveis</strong> em tempo real com
-                alertas automáticos
-              </span>
-            </li>
-            <li className="flex items-center gap-3">
-              <div className="w-5 h-5 bg-purple-500 rounded-full flex items-center justify-center">
-                <span className="text-white text-xs">✓</span>
-              </div>
-              <span className="text-neutral-300 text-sm">
-                <strong>Treinamento completo de 12 horas</strong> + certificação
-                da equipe
-              </span>
-            </li>
-            <li className="flex items-center gap-3">
-              <div className="w-5 h-5 bg-purple-500 rounded-full flex items-center justify-center">
-                <span className="text-white text-xs">✓</span>
-              </div>
-              <span className="text-neutral-300 text-sm">
-                <strong>Integrações ilimitadas</strong> incluindo APIs
-                customizadas
-              </span>
-            </li>
-          </ul>
-
-          <motion.button
-            className="w-full bg-purple-600 text-white py-3 rounded-xl hover:bg-purple-700 transition-colors font-semibold"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Escolher Professional
-          </motion.button>
-        </motion.div>
-
-        {/* Plano Enterprise */}
-        <motion.div
-          className="bg-neutral-800/50 backdrop-blur-md border border-neutral-700 rounded-2xl p-8 hover:border-yellow-600/50 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-500/10"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-          whileHover={{ scale: 1.02, y: -5 }}
-        >
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 bg-yellow-500/20 rounded-xl border border-yellow-500/30 flex items-center justify-center">
-              <span className="text-yellow-400 font-bold text-lg">👑</span>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-white">Enterprise</h3>
-              <p className="text-yellow-400 text-sm">Para grandes empresas</p>
-            </div>
-          </div>
-
-          <div className="mb-8">
-            <div className="flex items-baseline gap-2">
-              <span className="text-4xl font-bold text-white">Sob</span>
-              <span className="text-2xl font-bold text-white">Consulta</span>
-            </div>
-            <p className="text-neutral-500 text-sm mt-2">
-              Automação ilimitada de processos complexos
-            </p>
-          </div>
-
-          <ul className="space-y-4 mb-8">
-            <li className="flex items-center gap-3">
-              <div className="w-5 h-5 bg-yellow-500 rounded-full flex items-center justify-center">
-                <span className="text-white text-xs">✓</span>
-              </div>
-              <span className="text-neutral-300 text-sm">
-                <strong>Automação ilimitada</strong> de processos de alta
-                complexidade
-              </span>
-            </li>
-            <li className="flex items-center gap-3">
-              <div className="w-5 h-5 bg-yellow-500 rounded-full flex items-center justify-center">
-                <span className="text-white text-xs">✓</span>
-              </div>
-              <span className="text-neutral-300 text-sm">
-                <strong>Machine Learning avançado</strong> com modelos
-                proprietários
-              </span>
-            </li>
-            <li className="flex items-center gap-3">
-              <div className="w-5 h-5 bg-yellow-500 rounded-full flex items-center justify-center">
-                <span className="text-white text-xs">✓</span>
-              </div>
-              <span className="text-neutral-300 text-sm">
-                <strong>Equipe técnica dedicada 24/7</strong> + arquiteto de
-                soluções
-              </span>
-            </li>
-            <li className="flex items-center gap-3">
-              <div className="w-5 h-5 bg-yellow-500 rounded-full flex items-center justify-center">
-                <span className="text-white text-xs">✓</span>
-              </div>
-              <span className="text-neutral-300 text-sm">
-                <strong>Integração com BI</strong> (Power BI, Tableau, Qlik) e
-                dados em tempo real
-              </span>
-            </li>
-            <li className="flex items-center gap-3">
-              <div className="w-5 h-5 bg-yellow-500 rounded-full flex items-center justify-center">
-                <span className="text-white text-xs">✓</span>
-              </div>
-              <span className="text-neutral-300 text-sm">
-                <strong>Consultoria estratégica mensal</strong> + roadmap de
-                inovação
-              </span>
-            </li>
-            <li className="flex items-center gap-3">
-              <div className="w-5 h-5 bg-yellow-500 rounded-full flex items-center justify-center">
-                <span className="text-white text-xs">✓</span>
-              </div>
-              <span className="text-neutral-300 text-sm">
-                <strong>SLA Premium</strong> com 99.9% de uptime garantido
-              </span>
-            </li>
-          </ul>
-
-          <motion.button
-            className="w-full bg-yellow-600 text-white py-3 rounded-xl hover:bg-yellow-700 transition-colors font-semibold"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Falar com Consultor
-          </motion.button>
-        </motion.div>
+            {/* CTA Button */}
+            <motion.button
+              className={`w-full py-3 rounded-xl font-semibold transition-colors ${
+                plan.name === "Enterprise"
+                  ? "bg-yellow-600 hover:bg-yellow-700 text-white"
+                  : `bg-${plan.color}-600 hover:bg-${plan.color}-700 text-white`
+              }`}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {plan.name === "Enterprise"
+                ? "Falar com Consultor"
+                : `Escolher ${plan.name}`}
+            </motion.button>
+          </motion.div>
+        ))}
       </div>
 
-      {/* Tabela Comparativa Detalhada */}
+      {/* Comparação rápida */}
       <motion.div
-        className="mt-20 max-w-6xl mx-auto"
-        initial={{ opacity: 0, y: 30 }}
+        className="mt-12 max-w-4xl mx-auto"
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
         viewport={{ once: true }}
       >
-        <div className="text-center mb-12">
-          <h3 className="text-3xl font-bold text-white mb-4">
-            Comparação Detalhada dos Planos
+        <div className="bg-neutral-800/30 backdrop-blur-md border border-neutral-700 rounded-2xl p-6">
+          <h3 className="text-xl font-bold text-white mb-4 text-center">
+            Comparação Rápida
           </h3>
-          <p className="text-neutral-400 max-w-2xl mx-auto">
-            Veja todos os recursos incluídos em cada plano para tomar a melhor
-            decisão para sua empresa
-          </p>
-        </div>
 
-        <div className="bg-neutral-800/30 backdrop-blur-md border border-neutral-700 rounded-2xl overflow-hidden">
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead className="bg-neutral-700/50">
-                <tr>
-                  <th className="text-left p-4 text-white font-semibold">
-                    Recursos
-                  </th>
-                  <th className="text-center p-4 text-blue-400 font-semibold">
-                    Starter
-                  </th>
-                  <th className="text-center p-4 text-purple-400 font-semibold">
-                    Professional
-                  </th>
-                  <th className="text-center p-4 text-yellow-400 font-semibold">
-                    Enterprise
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="text-neutral-300">
-                <tr className="border-t border-neutral-600">
-                  <td className="p-4 font-medium">Processos Automatizados</td>
-                  <td className="text-center p-4">Até 5</td>
-                  <td className="text-center p-4">Até 20</td>
-                  <td className="text-center p-4">Ilimitado</td>
-                </tr>
-                <tr className="border-t border-neutral-600 bg-neutral-800/20">
-                  <td className="p-4 font-medium">Integrações de Sistemas</td>
-                  <td className="text-center p-4">Até 5 sistemas básicos</td>
-                  <td className="text-center p-4">Ilimitadas + APIs</td>
-                  <td className="text-center p-4">
-                    Ilimitadas + BI + APIs customizadas
-                  </td>
-                </tr>
-                <tr className="border-t border-neutral-600">
-                  <td className="p-4 font-medium">Suporte Técnico</td>
-                  <td className="text-center p-4">Email (resposta 24h)</td>
-                  <td className="text-center p-4">
-                    Chat dedicado + Gerente de conta
-                  </td>
-                  <td className="text-center p-4">Equipe dedicada 24/7</td>
-                </tr>
-                <tr className="border-t border-neutral-600 bg-neutral-800/20">
-                  <td className="p-4 font-medium">Dashboard e Relatórios</td>
-                  <td className="text-center p-4">
-                    Básico (relatórios mensais)
-                  </td>
-                  <td className="text-center p-4">Customizável (tempo real)</td>
-                  <td className="text-center p-4">
-                    Executivo com BI integrado
-                  </td>
-                </tr>
-                <tr className="border-t border-neutral-600">
-                  <td className="p-4 font-medium">Treinamento Incluído</td>
-                  <td className="text-center p-4">4 horas (até 3 pessoas)</td>
-                  <td className="text-center p-4">12 horas + certificação</td>
-                  <td className="text-center p-4">
-                    Consultoria estratégica ilimitada
-                  </td>
-                </tr>
-                <tr className="border-t border-neutral-600 bg-neutral-800/20">
-                  <td className="p-4 font-medium">Personalização da IA</td>
-                  <td className="text-center p-4">Modelos padrão</td>
-                  <td className="text-center p-4">Treinada com seus dados</td>
-                  <td className="text-center p-4">
-                    Machine Learning proprietário
-                  </td>
-                </tr>
-                <tr className="border-t border-neutral-600">
-                  <td className="p-4 font-medium">SLA de Uptime</td>
-                  <td className="text-center p-4">99%</td>
-                  <td className="text-center p-4">99.5%</td>
-                  <td className="text-center p-4">99.9%</td>
-                </tr>
-              </tbody>
-            </table>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+            <div className="space-y-2">
+              <div className="text-blue-400 font-semibold">Starter</div>
+              <div className="text-sm text-neutral-300">5 processos</div>
+              <div className="text-sm text-neutral-300">Email 24h</div>
+              <div className="text-sm text-neutral-300">Dashboard básico</div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-purple-400 font-semibold">Professional</div>
+              <div className="text-sm text-neutral-300">20 processos</div>
+              <div className="text-sm text-neutral-300">Chat + gerente</div>
+              <div className="text-sm text-neutral-300">IA personalizada</div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-yellow-400 font-semibold">Enterprise</div>
+              <div className="text-sm text-neutral-300">Ilimitado</div>
+              <div className="text-sm text-neutral-300">Equipe 24/7</div>
+              <div className="text-sm text-neutral-300">ML avançado</div>
+            </div>
           </div>
         </div>
       </motion.div>
 
-      {/* CTA Section */}
+      {/* CTA Final */}
       <motion.div
-        className="mt-16 text-center"
+        className="mt-12 text-center"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.6 }}
         viewport={{ once: true }}
       >
-        <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-8 max-w-4xl mx-auto">
-          <h3 className="text-2xl font-bold text-white mb-4">
+        <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-xl p-6 max-w-3xl mx-auto">
+          <h3 className="text-lg font-bold text-white mb-2">
             Não sabe qual plano escolher?
           </h3>
-          <p className="text-neutral-300 mb-6 max-w-2xl mx-auto">
-            Agende uma{" "}
-            <strong className="text-blue-400">consultoria gratuita</strong> e
-            nossos especialistas ajudarão você a identificar o plano ideal para
-            suas necessidades específicas.
+          <p className="text-neutral-300 mb-4">
+            Nossa{" "}
+            <strong className="text-blue-400">consultoria gratuita</strong>{" "}
+            identifica o plano ideal para sua empresa.
           </p>
           <motion.a
             href="#contato"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-8 py-4 rounded-full hover:from-blue-500 hover:to-purple-500 transition-all duration-300"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-6 py-3 rounded-xl hover:from-blue-500 hover:to-purple-500 transition-all duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             <span>Falar com Especialista</span>
             <svg
-              className="w-5 h-5"
+              className="w-4 h-4"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

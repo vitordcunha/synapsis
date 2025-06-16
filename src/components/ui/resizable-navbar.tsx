@@ -85,6 +85,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
 };
 
 export const NavBody = ({ children, className, visible }: NavBodyProps) => {
+  if (visible) return null;
   return (
     <motion.div
       animate={{
